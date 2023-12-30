@@ -162,9 +162,7 @@ fn main() {
             entity_color,
         );
 
-        let score = format!("{} - {}", pong.score.0, pong.score.1);
-        d.draw_text(&score, (SCREEN_WIDTH / 2) - font_size, SCREEN_HEIGTH / 2, font_size, font_color);
-        std::mem::drop(score);
+        d.draw_text(format!("{} - {}", pong.score.0, pong.score.1).as_str(), (SCREEN_WIDTH / 2) - font_size, SCREEN_HEIGTH / 2, font_size, font_color);
     }
 }
 
